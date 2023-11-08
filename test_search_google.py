@@ -1,7 +1,4 @@
-from selene.support.shared import browser
-from selene import be, have
-import conftest
-import pytest
+from selene import be, have, browser
 
 
 def test_search_1(browser_open):
@@ -14,5 +11,3 @@ def test_search_2(browser_open):
     browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('asdasdqw123asdsadfgqwdaswqdfsa213f').press_enter()
     browser.element('[class ="Gfzyee VDgVie jREHUb R1smN Pjsr7c"]').click()
-
-
